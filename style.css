@@ -121,7 +121,7 @@ main {
 }
 .c-card-container__grid-item h2 {
   font-weight: 700;
-  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-size: clamp(1.5rem, 5vw, 1.8rem);
 }
 .c-card-container__grid-item {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -208,9 +208,20 @@ footer {
   .c-card-container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "one one"
+      "two three";
   }
-  .item-1 {
+  /* .item-1 {
     grid-column: 1/3;
     padding: 4rem;
+  } */
+
+  /* Same as above, just using grid-template areas */
+
+  .item-1 {
+    grid-area: one;
+    padding: 4rem;
+    padding-left: 1.5rem;
   }
 }
